@@ -1,50 +1,69 @@
 # Monte Carlo Portfolio Simulator
 
-## Overview
+This repository contains a Python workflow for modeling portfolio outcomes through Monte Carlo simulation. It is designed to explore how repeated trials can help compare possible returns, downside risk, and uncertainty across investment assumptions.
 
-This project explores portfolio behavior through Monte Carlo simulation. It is designed to model potential outcomes, compare risk patterns, and provide a clearer view of how uncertainty affects investment decisions.
+This project is for technical demonstration and educational analysis. It is not financial advice.
 
-## Features
+## What This Project Shows
 
-- Simulates possible portfolio outcomes over repeated trials
-- Supports risk and return analysis through generated distributions
-- Organizes calculations in a reproducible Python workflow
-- Provides a foundation for adding more advanced financial modeling methods
-
-## Technical Approach
-
-The project uses Python to generate repeated simulations from financial assumptions. The main idea is to evaluate many possible outcomes instead of relying on a single deterministic estimate. This makes it easier to compare downside risk, expected performance, and variability across assumptions.
+- Monte Carlo simulation as a practical modeling technique
+- Python-based numerical analysis workflow
+- Portfolio risk and return exploration
+- Visualization of simulated outcomes
+- A compact script-based project that can be extended into a larger analysis tool
 
 ## Repository Structure
 
-- `README.md` project documentation
-- `*.py` Python source files or scripts
-- `requirements.txt` dependency list, if included
-- `data/` local data folder, if used and safe to publish
+```text
+.
+├── monteCarloSim.py    Main simulation script
+├── requirements.txt    Python dependencies
+├── README.md           Project documentation
+└── .gitignore          Local and generated file exclusions
+```
 
-## Setup
+## Technical Approach
 
-- Clone the repository
-- Install dependencies with `pip install -r requirements.txt` if a requirements file is included
-- Run the main Python script or notebook
-- Review generated outputs and plots
+The simulator uses repeated random trials to estimate a range of possible portfolio outcomes instead of presenting a single deterministic forecast. This makes the uncertainty visible and allows the user to compare the distribution of outcomes under different assumptions.
+
+Typical analysis questions include:
+
+- What range of outcomes appears under the current assumptions?
+- How does downside risk change when assumptions change?
+- How concentrated or spread out are the simulated results?
+- What does the distribution suggest about variability?
+
+## Local Setup
+
+```powershell
+python -m venv .venv
+.\\.venv\\Scripts\\Activate.ps1
+pip install -r requirements.txt
+```
 
 ## Usage
 
-- Adjust input assumptions for the portfolio being modeled
-- Run the simulation
-- Use the output distributions to compare possible performance ranges
-- Keep private financial data out of the public repository
+```powershell
+python monteCarloSim.py
+```
+
+Adjust assumptions directly in the script before running a new simulation.
+
+## Public-Safe Data Policy
+
+Do not commit private financial information, brokerage exports, account statements, or personal portfolio records. If sample data is added later, it should be synthetic or clearly public-safe.
 
 ## Limitations
 
-- The model depends on assumptions provided by the user
-- Historical or simulated results should not be treated as financial advice
-- The public repository may not include private datasets or local experiment files
+- Outputs depend heavily on the assumptions provided by the user.
+- Random simulation does not predict future market behavior.
+- The project does not account for every real-world cost, tax, liquidity, or behavioral factor.
+- Historical or simulated performance should not be treated as investment guidance.
 
 ## Future Improvements
 
-- Add clearer input validation
-- Add sample data that is safe to publish
-- Improve visualization of simulation outputs
-- Add tests for core calculation functions
+- Move assumptions into a config file or command-line interface.
+- Add input validation and clearer error handling.
+- Add synthetic sample scenarios.
+- Add tests for core calculation functions.
+- Separate plotting and simulation logic into reusable modules.
