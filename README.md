@@ -53,6 +53,12 @@ Adjust assumptions directly in the script before running a new simulation.
 
 Do not commit private financial information, brokerage exports, account statements, or personal portfolio records. If sample data is added later, it should be synthetic or clearly public-safe.
 
+## Legal and Safety Notes
+
+- [Disclaimer](DISCLAIMER.md): this project is not financial, investment, tax, or legal advice.
+- [Privacy Notes](PRIVACY.md): do not publish private portfolio or account data.
+- [Security Policy](SECURITY.md): report exposed credentials or private financial data privately.
+
 ## Limitations
 
 - Outputs depend heavily on the assumptions provided by the user.
